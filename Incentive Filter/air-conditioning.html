@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"></link>
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css"></link>
+    <link href="css/styles.css" rel="stylesheet" type="text/css"></link>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/swr_logic.js"></script>
+    <script src="js/variable_assign.js"></script>
+
+    <title>Incentive Filter Dictionary Tool</title>
+  </head>
+  <div class = 'incentive-container'>
+    <h2>Air Conditioning</h2>
+  </div>
+  <div class='page-wrapper'>
+    <div class='row'>
+      <div class='column'>
+        <div class='question-column'>
+          <div class = 'question-container'>
+            <h2>Questions:</h2>
+          </div>
+          <form id = 'questions'>
+         <!-- start of the question code blocks -->
+            <label for = "i-am-a">1) I am a:</label>
+            <select id = "i-am-a">
+              <option selected disabled hidden style='display: none' value=''></option>
+              <option value="i_am_a_no_value" selected>-</option>
+              <option value="homeowner">Homeowner and primary resident</option>
+              <option value="renter">Renter</option>
+              <option value="landlord">Landlord or property manager</option>
+            </select>
+            <br><br>
+            <label for = "my-home">2) My home is:</label>
+            <select id = "my-home">
+              <option selected disabled hidden style='display: none' value=''></option>
+              <option value="my_home_no_value" selected>-</option>
+              <option value="single-family">Single family home</option>
+              <option value="apartment">Apartment</option>
+              <option value="townhouse">Townhouse</option>
+              <option value="duplex">Duplex</option>
+              <option value="triplex">Triplex</option>
+              <option value="fourplex">Fourplex</option>
+              <option value="condo">Condo</option>
+              <option value="manufactured">Manufactured home</option>
+            </select>
+            <br><br>
+            <label for = "primary-heat">3) My home is primarily heated with:</label>
+            <select id = "primary-heat">
+              <option selected disabled hidden style='display: none' value=''></option>
+              <option value="primary_heat_no_value" selected>-</option>
+              <option value="elec-resistance">Electric resistance zonal heat</option>
+              <option value="efaf">Electric forced-air furnace</option>
+              <option value="gfaf">Gas forced-air furnace</option>
+              <option value="heat-pump">Heat pump</option>
+              <option value="dhp">Ductless heat pump</option>
+              <option value="other-heat">Other</option>
+            </select>
+            <br><br>
+            <label for = "elec-utility">4) Who is your electric provider?</label>
+            <select id = "elec-utility">
+              <option selected disabled hidden style='display: none' value=''></option>
+              <option value="elec_utility_no_value" selected>-</option>
+              <option value="pge">PGE</option>
+              <option value="pac">Pacific Power</option>
+              <option value="other-elec">Other</option>
+            </select>
+            <br><br>
+            <label for = "gas-utility">5) Who is your natural gas provider?</label>
+            <select id = "gas-utility">
+              <option selected disabled hidden style='display: none' value=''></option>
+              <option value="gas_utility_no_value" selected>-</option>
+              <option value="nwn">NW Natural</option>
+              <option value="cng">Cascade Natural Gas</option>
+              <option value="avi">Avista</option>
+              <option value="no-gas">None</option>
+            </select>
+            <br><br>
+            <label for = "state">6) Zip code</label>
+            <select id = "state">
+              <option selected disabled hidden style='display: none' value=''></option>
+              <option value="state_no_value" selected>-</option>
+              <option value="oregon">Oregon zip code</option>
+              <option value="washington">Washington zip code</option>
+            </select>
+            <br><br>
+            <label for="q108">7) How many full-time residents live in your home?</label>
+            <select id="q108">
+              <option selected disabled hidden style='display: none' value=''></option>
+              <option value="income_no_value" selected>-</option>
+              <option value="a108_01">1</option>
+              <option value="a108_02">2</option>
+              <option value="a108_03">3</option>
+              <option value="a108_04">4</option>
+              <option value="a108_05">5</option>
+              <option value="a108_06">6</option>
+              <option value="a108_07">7</option>
+              <option value="a108_08">8</option>
+              <option value="a108_09">8+</option>
+              <option value="a108_10">Skip/I prefer not to answer</option>
+            </select>
+            <br><br>
+            <label for="q107">8) What is your annual household income?</label>
+            <select disabled id="q107">
+            </select>
+            <br><br>
+             <button type="submit" input type ="button" class="btn btn-default">Show me results</button>
+          </div>
+        </div>
+      </form>
+         <!-- start of the incentive code blocks -->
+      <div class='column'>
+        <div class='incentive-column'>
+          <div class = 'available-incentives-container'>
+            <h2>Incentive(s) available:</h2>
+            <p>All available incentives will display until questions are completed here:</p>
+            <div class = "central-air"><h3>Central Air Conditioner (15 SEER)</h3> <h4>Discount of $100</h4>
+              <div class = "central-air-install-specs">
+                <p><b>Installation specifications:</b> Outdoor unit is required to achieve a minimum nominal rating of SEER 15 or greater as stated by the manufacturer and listed on our <a href="https://www.energytrust.org/wp-content/uploads/2019/07/Central-AC-Outdoor-Unit-QPL.pdf" target="_blank" rel="noopener"> qualified products list</a>. System EER must be 12 or greater. Central air conditioner must serve most or all of the home. Limited to one incentive per residence. Residences primarily heated with a heat pump do not qualify.
+              </div>
+              <div class = "central-air-seer"><p><b>Nominal SEER</b>:Seasonal Energy Efficiency Rating of the outdoor air conditioner rated by the Air Conditioning, Heating & Refrigeration Institution (<a href="https://www.ahrinet.org/home" target="_blank" rel="noopener">AHRI</a>). The higher the SEER, the more energy efficient the air conditioner.</p></div>
+              <div class = "central-air-eer"><p><b>System EER</b>:Energy Efficiency Rating of the entire HVAC system (air conditioner, indoor evaporator coil, and furnace) rated by the Air Conditioning, Heating & Refrigeration Institution (<a href="https://www.ahrinet.org/home" target="_blank" rel="noopener">AHRI</a>). The higher the EER, the more energy efficient the air conditioner.</p></div>
+              <div class = central-air-all-obr>
+              <div class = "central-air-obr">
+                <p><b>On-bill loan repayment option</b>: If you own and occupy your home and have the work performed by a <a href="https://www.energytrust.org/find-a-contractor/?service=oregon-on-bill-repayment&zipCode=97202&type=home" target="_blank" rel="noopener">participating trade ally contractor</a>, avoid the upfront cost and pay for the upgrade via a charge added to your Pacific Power or NW Natural utility bill. To learn specifically about how to set up on-bill loan repayment, <a href = "https://www.energytrust.org/incentives/or-on-bill-repayment/">click here</a>.</p>
+              </div>
+              <div class = "central-air-swrobr"><p><b>Savings Within Reach On-bill loan repayment option</b>: If you own and occupy your home and have the work performed by a <a href="https://yearend-energy-trust.pantheonsite.io/find-a-contractor/?service=savings-within-reach-on-bill-repayment&zipCode=97202&type=home" target="_blank" rel="noopener">participating trade ally contractor</a>, avoid the upfront cost and pay for the upgrade via a charge added to your Pacific Power or NW Natural utility bill. To learn specifically about how to set up on-bill loan repayment, <a href = "https://www.energytrust.org/incentives/savings-within-reach-on-bill-repayment">click here</a>.</p></div>
+            </div>
+            </div>
+            <div class = "central-air"><h3>Central Air Conditioner (16 SEER)</h3> <h4>Discount of $250</h4>
+              <div class = "central-air-install-specs">
+                <p><b>Installation specifications:</b> Outdoor unit is required to achieve a minimum nominal rating of SEER 16 or greater as stated by the manufacturer and listed on our <a href="https://www.energytrust.org/wp-content/uploads/2019/07/Central-AC-Outdoor-Unit-QPL.pdf" target="_blank" rel="noopener"> qualified products list</a>. System EER must be 12 or greater. Central air conditioner must serve most or all of the home. Limited to one incentive per residence. Residences primarily heated with a heat pump do not qualify.
+              </div>
+              <div class = "central-air-seer"><p><b>Nominal SEER</b>:Seasonal Energy Efficiency Rating of the outdoor air conditioner rated by the Air Conditioning, Heating & Refrigeration Institution (<a href="https://www.ahrinet.org/home" target="_blank" rel="noopener">AHRI</a>). The higher the SEER, the more energy efficient the air conditioner.</p></div>
+              <div class = "central-air-eer"><p><b>System EER</b>:Energy Efficiency Rating of the entire HVAC system (air conditioner, indoor evaporator coil, and furnace) rated by the Air Conditioning, Heating & Refrigeration Institution (<a href="https://www.ahrinet.org/home" target="_blank" rel="noopener">AHRI</a>). The higher the EER, the more energy efficient the air conditioner.</p></div>
+              <div class = central-air-all-obr>
+              <div class = "central-air-obr"><p><b>On-bill loan repayment option</b>: If you own and occupy your home and have the work performed by a <a href="https://www.energytrust.org/find-a-contractor/?service=oregon-on-bill-repayment&zipCode=97202&type=home" target="_blank" rel="noopener">participating trade ally contractor</a>, avoid the upfront cost and pay for the upgrade via a charge added to your Pacific Power or NW Natural utility bill. To learn specifically about how to set up on-bill loan repayment, <a href = "https://www.energytrust.org/incentives/or-on-bill-repayment/">click here</a>.</p></div>
+              <div class = "central-air-swrobr"><p><b>Savings Within Reach On-bill loan repayment option</b>: If you own and occupy your home and have the work performed by a <a href="https://yearend-energy-trust.pantheonsite.io/find-a-contractor/?service=savings-within-reach-on-bill-repayment&zipCode=97202&type=home" target="_blank" rel="noopener">participating trade ally contractor</a>, avoid the upfront cost and pay for the upgrade via a charge added to your Pacific Power or NW Natural utility bill. To learn specifically about how to set up on-bill loan repayment, <a href = "https://www.energytrust.org/incentives/savings-within-reach-on-bill-repayment">click here</a>.</p></div>
+              </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class = 'column'>
+      <div class = 'explaination-column'>
+        <h2>Why?</h2>
+        <p>Explaination as to why the customer doesn't qualify will display after questions are completed will display here:</p>
+        <div class = 'dnq-incentive-column'>
+            <h3>Why doesn't this customer qualify for this incentive?</h3>
+              <div id = "dnq-housing-stock"><li>The customer lives in a large multifamily home or housing type was not specified.</div></li>
+              <div id = "dnq-elec-provider"><li>The customer's residence is not serviced by PGE or Pacific Power or was not specified.</div></li>
+              <div id = "dnq-state"><li>The customer lives in Washington or was not specified.</div></li>
+        </div>
+        <div class = 'dnq-obr-column'>
+            <h3>Why does this customer qualify for the incentive, but does not qualify for any On Bill Repayment options?</h3>
+              <div id = "dnq-obr"><li>The customer's residence is not serviced by Pacific Power or PGE+NW Natural or was not specified</div></li>
+              <div id = "dnq-resident-type"><li>This customer does not own and occupy their home or was not specified.</div></li>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</html>

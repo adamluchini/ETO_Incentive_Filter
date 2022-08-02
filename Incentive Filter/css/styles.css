@@ -1,0 +1,53 @@
+.incentive-container {
+  text-align: center;
+}
+
+.question-container {
+  text-align: center;
+}
+
+.available-incentives-container {
+  text-align: center;
+}
+
+.page-wrapper {
+  margin: 15px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.question-column {
+  background-color: #29c2de;
+  height: auto;
+}
+
+.incentive-column {
+  background-color: #e6b012;
+  height: auto;
+}
+
+.explaination-column {
+  background-color: #5c5c4f;
+  height: auto;
+  color: white;
+}
+
+.dnq-incentive-column {
+  display: none;
+}
+
+.dnq-obr-column {
+  display: none;
+}
